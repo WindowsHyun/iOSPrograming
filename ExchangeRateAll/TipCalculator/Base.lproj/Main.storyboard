@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hM8-JV-chk">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--환율계산기-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExchangeRateAll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원화 총액 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4r-JE-Ljj">
+                                <rect key="frame" x="51.5" y="81" width="72.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원/USD : 1148" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FA-1L-Qga">
+                                <rect key="frame" x="18" y="120" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LNZ-nL-wrY">
+                                <rect key="frame" x="136" y="77" width="448" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1148" minValue="1148" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="8uf-XE-dJm">
+                                <rect key="frame" x="132" y="116" width="452" height="31"/>
+                                <connections>
+                                    <action selector="taxPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dVx-Ot-Mwh"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJE-a1-dMi">
+                                <rect key="frame" x="268" y="262" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c0p-ZZ-P9R"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="748" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lwB-Qt-TDZ">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ff1-VK-Efe"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oBc-e0-Q8Z"/>
+                                </connections>
+                            </tableView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1058" minValue="1058" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="J16-2Q-3NT">
+                                <rect key="frame" x="132" y="154" width="452" height="31"/>
+                                <connections>
+                                    <action selector="taxPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1b4-Cp-nKJ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원/CNY : 176" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL0-1W-bxv">
+                                <rect key="frame" x="18" y="195" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="176" minValue="176" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="3b2-4R-I2h">
+                                <rect key="frame" x="132" y="192" width="452" height="31"/>
+                                <connections>
+                                    <action selector="taxPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1xb-e9-D6D"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원/EUR : 1297" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnD-H7-1rm">
+                                <rect key="frame" x="18" y="233" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1297" minValue="1297" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="enK-CI-OZ1">
+                                <rect key="frame" x="132" y="230" width="452" height="31"/>
+                                <connections>
+                                    <action selector="taxPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="SJo-FE-O2w"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원/JPY : 1058" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icI-bk-QYU">
+                                <rect key="frame" x="18" y="158" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bXX-ab-PP8" appends="YES" id="qSy-w7-wUj"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="환율계산기" id="WmL-ou-44l"/>
+                    <connections>
+                        <outlet property="cnyPctLabel" destination="CL0-1W-bxv" id="i3f-s5-v7S"/>
+                        <outlet property="cnyPctSlider" destination="3b2-4R-I2h" id="zea-AK-ExQ"/>
+                        <outlet property="eurPctLabel" destination="XnD-H7-1rm" id="BYG-E9-jXB"/>
+                        <outlet property="eurPctSlider" destination="enK-CI-OZ1" id="bnj-oH-b6H"/>
+                        <outlet property="jpyPctLabel" destination="icI-bk-QYU" id="Hdw-yJ-ADq"/>
+                        <outlet property="jpyPctSlider" destination="J16-2Q-3NT" id="6xQ-cu-dVw"/>
+                        <outlet property="tableView" destination="lwB-Qt-TDZ" id="b6T-VH-5UL"/>
+                        <outlet property="taxPctLabel" destination="6FA-1L-Qga" id="Rp6-tA-M8u"/>
+                        <outlet property="taxPctSlider" destination="8uf-XE-dJm" id="eeW-4h-rLq"/>
+                        <outlet property="totalTextField" destination="LNZ-nL-wrY" id="Oxg-kc-vKY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bXX-ab-PP8">
+                    <connections>
+                        <action selector="viewTapped:" destination="BYZ-38-t0r" id="KsX-DM-ijq"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1173" y="301"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Myp-pc-wMb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hM8-JV-chk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zxl-tU-dZU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ifI-rv-B5V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDb-Fg-Rk5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="301"/>
+        </scene>
+    </scenes>
+</document>
