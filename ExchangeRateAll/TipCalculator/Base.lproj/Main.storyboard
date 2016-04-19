@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hM8-JV-chk">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--환율계산기-->
@@ -16,76 +18,106 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원화 총액 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4r-JE-Ljj">
-                                <rect key="frame" x="51.5" y="81" width="72.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원화 총액 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4r-JE-Ljj">
+                                <rect key="frame" x="52" y="81" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원/USD : 1148" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FA-1L-Qga">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원/USD : 1148" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FA-1L-Qga">
                                 <rect key="frame" x="18" y="120" width="108" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LNZ-nL-wrY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LNZ-nL-wrY">
                                 <rect key="frame" x="136" y="77" width="448" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1148" minValue="1148" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="8uf-XE-dJm">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1148" minValue="1148" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="8uf-XE-dJm">
                                 <rect key="frame" x="132" y="116" width="452" height="31"/>
                                 <connections>
                                     <action selector="taxPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dVx-Ot-Mwh"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJE-a1-dMi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJE-a1-dMi">
                                 <rect key="frame" x="268" y="262" width="64" height="30"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
                                     <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c0p-ZZ-P9R"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="748" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lwB-Qt-TDZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="748" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lwB-Qt-TDZ">
                                 <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="M84-NC-9uw">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M84-NC-9uw" id="X9y-4B-4HK">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hxB-N4-fBN">
+                                        <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hxB-N4-fBN" id="3xX-Bd-RtK">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bkJ-Sa-FjE">
+                                        <rect key="frame" x="0.0" y="116" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bkJ-Sa-FjE" id="G4g-2g-Kjb">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="ff1-VK-Efe"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="oBc-e0-Q8Z"/>
                                 </connections>
                             </tableView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1058" minValue="1058" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="J16-2Q-3NT">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1058" minValue="1058" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="J16-2Q-3NT">
                                 <rect key="frame" x="132" y="154" width="452" height="31"/>
                                 <connections>
                                     <action selector="taxPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1b4-Cp-nKJ"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원/CNY : 176" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL0-1W-bxv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원/CNY : 176" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL0-1W-bxv">
                                 <rect key="frame" x="18" y="195" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="176" minValue="176" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="3b2-4R-I2h">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="176" minValue="176" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="3b2-4R-I2h">
                                 <rect key="frame" x="132" y="192" width="452" height="31"/>
                                 <connections>
                                     <action selector="taxPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1xb-e9-D6D"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원/EUR : 1297" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnD-H7-1rm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원/EUR : 1297" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnD-H7-1rm">
                                 <rect key="frame" x="18" y="233" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1297" minValue="1297" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="enK-CI-OZ1">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1297" minValue="1297" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="enK-CI-OZ1">
                                 <rect key="frame" x="132" y="230" width="452" height="31"/>
                                 <connections>
                                     <action selector="taxPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="SJo-FE-O2w"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원/JPY : 1058" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icI-bk-QYU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원/JPY : 1058" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icI-bk-QYU">
                                 <rect key="frame" x="18" y="158" width="106" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="JWl-8h-eq9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -93,6 +125,42 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="8uf-XE-dJm" secondAttribute="trailing" constant="-2" id="3eN-s2-TlB"/>
+                            <constraint firstItem="aJE-a1-dMi" firstAttribute="centerX" secondItem="lwB-Qt-TDZ" secondAttribute="centerX" id="3il-Hj-Lns"/>
+                            <constraint firstItem="8uf-XE-dJm" firstAttribute="leading" secondItem="J16-2Q-3NT" secondAttribute="leading" id="4AO-Jq-Sb8"/>
+                            <constraint firstItem="J16-2Q-3NT" firstAttribute="top" secondItem="8uf-XE-dJm" secondAttribute="bottom" constant="8" symbolic="YES" id="50F-Mh-4zQ"/>
+                            <constraint firstItem="CL0-1W-bxv" firstAttribute="leading" secondItem="XnD-H7-1rm" secondAttribute="leading" id="BAy-ZU-gkq"/>
+                            <constraint firstItem="XnD-H7-1rm" firstAttribute="top" secondItem="CL0-1W-bxv" secondAttribute="bottom" constant="17" id="CUM-Le-mgM"/>
+                            <constraint firstItem="J16-2Q-3NT" firstAttribute="leading" secondItem="icI-bk-QYU" secondAttribute="trailing" constant="10" id="D7R-Hy-CWj"/>
+                            <constraint firstItem="LNZ-nL-wrY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="Gqh-b4-h7u"/>
+                            <constraint firstItem="lwB-Qt-TDZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IvL-T3-mnU"/>
+                            <constraint firstItem="CL0-1W-bxv" firstAttribute="trailing" secondItem="XnD-H7-1rm" secondAttribute="trailing" id="MI8-dx-FwP"/>
+                            <constraint firstItem="s4r-JE-Ljj" firstAttribute="centerY" secondItem="LNZ-nL-wrY" secondAttribute="centerY" id="Ne4-oe-MeO"/>
+                            <constraint firstItem="6FA-1L-Qga" firstAttribute="centerY" secondItem="8uf-XE-dJm" secondAttribute="centerY" id="POx-LM-l9z"/>
+                            <constraint firstItem="3b2-4R-I2h" firstAttribute="top" secondItem="J16-2Q-3NT" secondAttribute="bottom" constant="8" symbolic="YES" id="QJo-jZ-waV"/>
+                            <constraint firstItem="J16-2Q-3NT" firstAttribute="trailing" secondItem="3b2-4R-I2h" secondAttribute="trailing" id="TnD-PY-w2q"/>
+                            <constraint firstItem="6FA-1L-Qga" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-2" id="Tr5-Yi-S6X"/>
+                            <constraint firstItem="6FA-1L-Qga" firstAttribute="leading" secondItem="icI-bk-QYU" secondAttribute="leading" id="U3h-n6-1eb"/>
+                            <constraint firstItem="LNZ-nL-wrY" firstAttribute="leading" secondItem="s4r-JE-Ljj" secondAttribute="trailing" constant="11" id="UfC-Eq-R49"/>
+                            <constraint firstItem="lwB-Qt-TDZ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="VXA-fL-pzE"/>
+                            <constraint firstAttribute="trailing" secondItem="lwB-Qt-TDZ" secondAttribute="trailing" id="X3d-xb-4AY"/>
+                            <constraint firstItem="CL0-1W-bxv" firstAttribute="top" secondItem="icI-bk-QYU" secondAttribute="bottom" constant="16" id="Y39-mV-iAn"/>
+                            <constraint firstItem="8uf-XE-dJm" firstAttribute="leading" secondItem="6FA-1L-Qga" secondAttribute="trailing" constant="8" symbolic="YES" id="aoA-hu-Gr9"/>
+                            <constraint firstItem="J16-2Q-3NT" firstAttribute="leading" secondItem="3b2-4R-I2h" secondAttribute="leading" id="bmw-Mx-77U"/>
+                            <constraint firstItem="icI-bk-QYU" firstAttribute="trailing" secondItem="CL0-1W-bxv" secondAttribute="trailing" id="cXQ-Fu-D7H"/>
+                            <constraint firstItem="3b2-4R-I2h" firstAttribute="leading" secondItem="enK-CI-OZ1" secondAttribute="leading" id="d8d-5p-49m"/>
+                            <constraint firstItem="s4r-JE-Ljj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="f3K-PT-FRS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LNZ-nL-wrY" secondAttribute="trailing" constant="-4" id="fFM-LW-Mwr"/>
+                            <constraint firstItem="icI-bk-QYU" firstAttribute="leading" secondItem="CL0-1W-bxv" secondAttribute="leading" id="g3T-7Y-U5s"/>
+                            <constraint firstItem="icI-bk-QYU" firstAttribute="centerY" secondItem="J16-2Q-3NT" secondAttribute="centerY" id="jco-tc-u2K"/>
+                            <constraint firstItem="3b2-4R-I2h" firstAttribute="trailing" secondItem="enK-CI-OZ1" secondAttribute="trailing" id="kzm-IJ-gqx"/>
+                            <constraint firstItem="8uf-XE-dJm" firstAttribute="top" secondItem="LNZ-nL-wrY" secondAttribute="bottom" constant="9" id="nNZ-b8-csQ"/>
+                            <constraint firstItem="enK-CI-OZ1" firstAttribute="top" secondItem="3b2-4R-I2h" secondAttribute="bottom" constant="8" symbolic="YES" id="nTz-qM-fdk"/>
+                            <constraint firstItem="8uf-XE-dJm" firstAttribute="trailing" secondItem="J16-2Q-3NT" secondAttribute="trailing" id="pI6-cA-K31"/>
+                            <constraint firstItem="aJE-a1-dMi" firstAttribute="top" secondItem="enK-CI-OZ1" secondAttribute="bottom" constant="2" id="qP2-oz-bF9"/>
+                            <constraint firstItem="lwB-Qt-TDZ" firstAttribute="top" secondItem="aJE-a1-dMi" secondAttribute="bottom" constant="8" symbolic="YES" id="rcH-ow-Pgb"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="bXX-ab-PP8" appends="YES" id="qSy-w7-wUj"/>
                         </connections>
