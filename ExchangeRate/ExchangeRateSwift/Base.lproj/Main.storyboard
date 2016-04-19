@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fr0-dK-hGs">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--환전 계산기-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExchangeRate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원화 총액 :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jg3-n0-sLr">
+                                <rect key="frame" x="20" y="81" width="164" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="t44-IZ-4rJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원/달러 : 1000.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXL-qW-Y7t">
+                                <rect key="frame" x="20" y="120" width="164" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wHA-At-zmA">
+                                <rect key="frame" x="192" y="77" width="392" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="1000" maxValue="1300" translatesAutoresizingMaskIntoConstraints="NO" id="77V-Ic-pox">
+                                <rect key="frame" x="190" y="116" width="396" height="31"/>
+                                <connections>
+                                    <action selector="taxPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="IDU-1C-2cg"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaT-Us-KyU">
+                                <rect key="frame" x="268" y="154" width="64" height="30"/>
+                                <state key="normal" title="계산"/>
+                                <connections>
+                                    <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G8H-Y1-K2a"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Muc-17-CSi">
+                                <rect key="frame" x="16" y="192" width="568" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="IaT-Us-KyU" firstAttribute="centerX" secondItem="Muc-17-CSi" secondAttribute="centerX" id="2F2-cm-y0Z"/>
+                            <constraint firstItem="77V-Ic-pox" firstAttribute="leading" secondItem="FXL-qW-Y7t" secondAttribute="trailing" constant="8" symbolic="YES" id="3GH-rv-eRS"/>
+                            <constraint firstItem="wHA-At-zmA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="80T-21-ZoX"/>
+                            <constraint firstItem="wHA-At-zmA" firstAttribute="leading" secondItem="77V-Ic-pox" secondAttribute="leading" id="Bkq-p5-3sO"/>
+                            <constraint firstItem="wHA-At-zmA" firstAttribute="trailing" secondItem="77V-Ic-pox" secondAttribute="trailing" id="D87-42-9ua"/>
+                            <constraint firstItem="77V-Ic-pox" firstAttribute="trailing" secondItem="Muc-17-CSi" secondAttribute="trailing" id="Fj1-YL-6Ko"/>
+                            <constraint firstItem="77V-Ic-pox" firstAttribute="top" secondItem="wHA-At-zmA" secondAttribute="bottom" constant="9" id="GQ1-iW-K1R"/>
+                            <constraint firstItem="IaT-Us-KyU" firstAttribute="top" secondItem="77V-Ic-pox" secondAttribute="bottom" constant="8" symbolic="YES" id="HRh-jE-SOY"/>
+                            <constraint firstItem="wHA-At-zmA" firstAttribute="leading" secondItem="Jg3-n0-sLr" secondAttribute="trailing" constant="8" symbolic="YES" id="IGO-f4-9E1"/>
+                            <constraint firstItem="Jg3-n0-sLr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IXW-Or-qkt"/>
+                            <constraint firstItem="Muc-17-CSi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="M9P-bF-9Fu"/>
+                            <constraint firstItem="Jg3-n0-sLr" firstAttribute="leading" secondItem="FXL-qW-Y7t" secondAttribute="leading" id="Ti6-i6-ek0"/>
+                            <constraint firstItem="IaT-Us-KyU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WeS-u0-YBu"/>
+                            <constraint firstItem="Jg3-n0-sLr" firstAttribute="centerY" secondItem="wHA-At-zmA" secondAttribute="centerY" id="ZKo-Zy-qh5"/>
+                            <constraint firstItem="Jg3-n0-sLr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="bMe-NW-BBy"/>
+                            <constraint firstItem="FXL-qW-Y7t" firstAttribute="centerY" secondItem="77V-Ic-pox" secondAttribute="centerY" id="jqz-6f-VF0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Muc-17-CSi" secondAttribute="bottom" constant="8" symbolic="YES" id="qD9-SF-Kea"/>
+                            <constraint firstItem="Muc-17-CSi" firstAttribute="top" secondItem="IaT-Us-KyU" secondAttribute="bottom" constant="8" symbolic="YES" id="vcv-k7-cya"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2PT-3x-14O" appends="YES" id="pVU-vH-xz3"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="환전 계산기" id="pZK-kT-1Se"/>
+                    <connections>
+                        <outlet property="resultsTextView" destination="Muc-17-CSi" id="xdq-6C-fVR"/>
+                        <outlet property="taxPctLabel" destination="FXL-qW-Y7t" id="S99-SV-SuL"/>
+                        <outlet property="taxPctSlider" destination="77V-Ic-pox" id="R23-17-a9R"/>
+                        <outlet property="totalTextField" destination="wHA-At-zmA" id="IPQ-is-ONj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2PT-3x-14O">
+                    <connections>
+                        <action selector="viewTapped:" destination="BYZ-38-t0r" id="cOv-Sc-IWz"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="948" y="328"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xg4-JL-aCF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fr0-dK-hGs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KDe-y5-RlD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5zr-Ok-0ey"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AGz-eT-ZF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="715"/>
+        </scene>
+    </scenes>
+</document>
