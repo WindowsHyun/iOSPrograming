@@ -1,16 +1,44 @@
 //
-//  PlayersViewController.swift
+//  RatingPickerViewController.swift
 //  Ratings
 //
-//  Created by HyunWindows on 2016. 4. 12..
+//  Created by HyunWindows on 2016. 4. 19..
 //  Copyright © 2016년 HyunWindows. All rights reserved.
 //
 
 import UIKit
 
-class PlayersViewController: UITableViewController {
+class RatingPickerViewController: UITableViewController {
     
-    var players:[Player] = playersData
+    var ratings:[String] = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"]
+    
+    var selectedRating:String?{
+        didSet {
+            if let rating = selectedRating{
+                selectedRatingIndex = ratings.indexOf(rating)
+            }
+        }
+    }
+    var selectedRatingIndex:Int?
+    
+    //row선택되면 selectedGame을 update하는 tableView(:didselectRowAtIndexPath)가
+    //실행되기 전에 unwind segue가 실행되므로
+    //selectedGame을 unwind전에 update해야함!
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SaveSelectedRating" {
+            if let cell = sender as? UITableViewCell {
+                let indexPath = tableView.indexPathForCell(cell)
+                if let index = indexPath?.row {
+                    selectedRating = ratings[index]
+                }
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,44 +64,39 @@ class PlayersViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return players.count
+        return ratings.count
     }
 
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PlayerCell", forIndexPath: indexPath) //1
-            as! PlayerCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("RatingCell", forIndexPath: indexPath)
+        cell.textLabel?.text = ratings[indexPath.row]
+
+        if indexPath.row == selectedRatingIndex{
+            cell.accessoryType = .Checkmark
+        }else{
+            cell.accessoryType = .None
+        }
         
-        let player = players[indexPath.row] as Player //2
-        
-        cell.player = player
-        //cell.
         
         return cell
     }
     
-    @IBAction func cancelToPlayersController(segue:UIStoryboardSegue){
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-    }
-    
-    @IBAction func savePlayerDetail(segue:UIStoryboardSegue){
-        if let PlayerDetailsViewController = segue.sourceViewController as? PlayerDetailsViewController{
-            if let player = PlayerDetailsViewController.player{
-                players.append(player)
-                
-                let indexPath = NSIndexPath(forRow: players.count-1, inSection:0)
-                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-            }
+        if let index = selectedRatingIndex{
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0))
+            cell?.accessoryType = .None
         }
+        
+        selectedRating = ratings[indexPath.row]
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell?.accessoryType = .Checkmark
     }
     
-    /*
-    // rating에 따라서 서로다른 별개수 이미지를 반환
-    func imageForRating(rating:Int) -> UIImage? {
-        let imageName = "\(rating)Stars"
-        return UIImage(named: imageName)
-    }
- */
-    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

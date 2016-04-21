@@ -1,17 +1,49 @@
 //
-//  PlayersViewController.swift
+//  GamePickerViewController.swift
 //  Ratings
 //
-//  Created by HyunWindows on 2016. 4. 12..
+//  Created by HyunWindows on 2016. 4. 19..
 //  Copyright © 2016년 HyunWindows. All rights reserved.
 //
 
 import UIKit
 
-class PlayersViewController: UITableViewController {
+class GamePickerViewController: UITableViewController {
     
-    var players:[Player] = playersData
+    //gamr 리스트 배열 하드코드
+    var games:[String] = [
+    "Angry Birds",
+    "Chess",
+    "Russian Roulette",
+    "Spin the Bottle",
+    "Texas Hold'em Poker",
+    "Tic-Tac-Toe"]
 
+    //game을 선택하고 back버튼 눌렀을 때 그 값을 저장했다가 보내기 위해서 변수 선언
+    //selectedGame이 변경되면 games배열에서 인데스를 가져옴.
+    var selectedGame:String?{
+        didSet{
+            if let game=selectedGame{
+                selectedGameIndex = games.indexOf(game)!
+            }
+        }
+    }
+    var selectedGameIndex:Int?
+    
+    //row선택되면 selectedGame을 update하는 tableView(:didselectRowAtIndexPath)가
+    //실행되기 전에 unwind segue가 실행되므로
+    //selectedGame을 unwind전에 update해야함!
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SaveSelectedGame" {
+            if let cell = sender as? UITableViewCell {
+                let indexPath = tableView.indexPathForCell(cell)
+                if let index = indexPath?.row {
+                    selectedGame = games[index]
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,52 +60,46 @@ class PlayersViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    
+    // Section은 1개
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    // row의 개수는 games 배열 원소의 개수
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return players.count
+        return games.count
     }
 
+    // table view cell은 "GameCell" id를 가지며, 타이틀은 games 배열에서 꺼내서 설정
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PlayerCell", forIndexPath: indexPath) //1
-            as! PlayerCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("GameCell", forIndexPath: indexPath)
+        cell.textLabel?.text = games[indexPath.row]
         
-        let player = players[indexPath.row] as Player //2
-        
-        cell.player = player
-        //cell.
-        
+        if indexPath.row == selectedGameIndex{
+            cell.accessoryType = .Checkmark
+        }else{
+            cell.accessoryType = .None
+        }
+
         return cell
     }
     
-    @IBAction func cancelToPlayersController(segue:UIStoryboardSegue){
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-    }
-    
-    @IBAction func savePlayerDetail(segue:UIStoryboardSegue){
-        if let PlayerDetailsViewController = segue.sourceViewController as? PlayerDetailsViewController{
-            if let player = PlayerDetailsViewController.player{
-                players.append(player)
-                
-                let indexPath = NSIndexPath(forRow: players.count-1, inSection:0)
-                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-            }
+        if let index = selectedGameIndex{
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0))
+            cell?.accessoryType = .None
         }
+        
+        selectedGame = games[indexPath.row]
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell?.accessoryType = .Checkmark
     }
-    
-    /*
-    // rating에 따라서 서로다른 별개수 이미지를 반환
-    func imageForRating(rating:Int) -> UIImage? {
-        let imageName = "\(rating)Stars"
-        return UIImage(named: imageName)
-    }
- */
-    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

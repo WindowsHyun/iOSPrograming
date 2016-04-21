@@ -17,6 +17,8 @@
 		7C68F4B51CBCF846002454E3 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68F4B41CBCF846002454E3 /* PlayersViewController.swift */; };
 		7C68F4B71CBCF8B8002454E3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68F4B61CBCF8B8002454E3 /* Player.swift */; };
 		7C68F4B91CBCF938002454E3 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68F4B81CBCF938002454E3 /* SampleData.swift */; };
+		7C8DCB601CC62B3C00A7E4B2 /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DCB5F1CC62B3C00A7E4B2 /* GamePickerViewController.swift */; };
+		7C8DCB621CC6338700A7E4B2 /* RatingPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DCB611CC6338700A7E4B2 /* RatingPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		7C68F4B41CBCF846002454E3 /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		7C68F4B61CBCF8B8002454E3 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		7C68F4B81CBCF938002454E3 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		7C8DCB5F1CC62B3C00A7E4B2 /* GamePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
+		7C8DCB611CC6338700A7E4B2 /* RatingPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				7C68F4B81CBCF938002454E3 /* SampleData.swift */,
 				7C4982C51CBFA5B700AE8B6C /* PlayerCell.swift */,
 				7C4982C71CBFAF9300AE8B6C /* PlayerDetailsViewController.swift */,
+				7C8DCB5F1CC62B3C00A7E4B2 /* GamePickerViewController.swift */,
+				7C8DCB611CC6338700A7E4B2 /* RatingPickerViewController.swift */,
 			);
 			path = Ratings;
 			sourceTree = "<group>";
@@ -150,9 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C8DCB601CC62B3C00A7E4B2 /* GamePickerViewController.swift in Sources */,
 				7C4982C61CBFA5B700AE8B6C /* PlayerCell.swift in Sources */,
 				7C68F4B71CBCF8B8002454E3 /* Player.swift in Sources */,
 				7C68F4A31CBCEF2A002454E3 /* ViewController.swift in Sources */,
+				7C8DCB621CC6338700A7E4B2 /* RatingPickerViewController.swift in Sources */,
 				7C4982C81CBFAF9300AE8B6C /* PlayerDetailsViewController.swift in Sources */,
 				7C68F4A11CBCEF2A002454E3 /* AppDelegate.swift in Sources */,
 				7C68F4B91CBCF938002454E3 /* SampleData.swift in Sources */,
