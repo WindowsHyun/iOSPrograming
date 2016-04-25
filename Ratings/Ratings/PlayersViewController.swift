@@ -64,6 +64,7 @@ class PlayersViewController: UITableViewController {
                 tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             }
         }
+        
     }
     
     /*

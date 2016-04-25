@@ -30,13 +30,18 @@ class PlayerDetailsViewController: UITableViewController {
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBAction func unwindWithSelectedGame(segue:UIStoryboardSegue) {
+        
         if let gamePickerViewController = segue.sourceViewController as? GamePickerViewController,
             selectedGame = gamePickerViewController.selectedGame {
             game = selectedGame
         }
+        
+    }
+    
+    @IBAction func unwindWithSelectedRating(segue:UIStoryboardSegue) {
         if let RatingPickerViewController = segue.sourceViewController as? RatingPickerViewController,
             selectedRating = RatingPickerViewController.selectedRating {
-            rating = selectedRating
+            rating = String(selectedRating)
         }
     }
     
@@ -50,6 +55,13 @@ class PlayerDetailsViewController: UITableViewController {
                 GamePickerViewController.selectedGame = game
             }
         }
+        
+        if segue.identifier == "PickRating"{
+            if let RatingPickerViewController = segue.destinationViewController as? RatingPickerViewController{
+                RatingPickerViewController.selectedRating = Int(rating)
+            }
+        }
+        
     }
     
     required init?(coder aDecoder: NSCoder){

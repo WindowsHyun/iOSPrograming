@@ -10,17 +10,17 @@ import UIKit
 
 class RatingPickerViewController: UITableViewController {
     
-    var ratings:[String] = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5"]
+    var ratings:[Int] = [
+    1,
+    2,
+    3,
+    4,
+    5]
     
-    var selectedRating:String?{
+    var selectedRating:Int?{
         didSet {
             if let rating = selectedRating{
-                selectedRatingIndex = ratings.indexOf(rating)
+                selectedRatingIndex = ratings.indexOf(rating)!
             }
         }
     }
@@ -70,7 +70,7 @@ class RatingPickerViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("RatingCell", forIndexPath: indexPath)
-        cell.textLabel?.text = ratings[indexPath.row]
+        cell.textLabel?.text = String(ratings[indexPath.row])
 
         if indexPath.row == selectedRatingIndex{
             cell.accessoryType = .Checkmark
