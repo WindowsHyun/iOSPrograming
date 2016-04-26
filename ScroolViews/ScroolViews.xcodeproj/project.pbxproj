@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C10FB9F1CCF624600AED2DE /* CustomScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10FB9E1CCF624600AED2DE /* CustomScrollViewController.swift */; };
+		7C10FBA11CCF679B00AED2DE /* slow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C10FBA01CCF679B00AED2DE /* slow.png */; };
+		7C10FBA31CCF68AE00AED2DE /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10FBA21CCF68AE00AED2DE /* PagedScrollViewController.swift */; };
 		7C928D9B1CC8DFE3002F6D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C928D9A1CC8DFE3002F6D21 /* AppDelegate.swift */; };
 		7C928D9D1CC8DFE3002F6D21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C928D9C1CC8DFE3002F6D21 /* ViewController.swift */; };
 		7C928DA01CC8DFE3002F6D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C928D9E1CC8DFE3002F6D21 /* Main.storyboard */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C10FB9E1CCF624600AED2DE /* CustomScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomScrollViewController.swift; sourceTree = "<group>"; };
+		7C10FBA01CCF679B00AED2DE /* slow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slow.png; sourceTree = "<group>"; };
+		7C10FBA21CCF68AE00AED2DE /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
 		7C928D971CC8DFE3002F6D21 /* ScroolViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScroolViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C928D9A1CC8DFE3002F6D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C928D9C1CC8DFE3002F6D21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +70,7 @@
 		7C928D991CC8DFE3002F6D21 /* ScroolViews */ = {
 			isa = PBXGroup;
 			children = (
+				7C10FBA01CCF679B00AED2DE /* slow.png */,
 				7C928DAC1CC8E103002F6D21 /* photo1.png */,
 				7C928DAD1CC8E103002F6D21 /* photo2.png */,
 				7C928DAE1CC8E103002F6D21 /* photo3.png */,
@@ -75,6 +82,8 @@
 				7C928DA11CC8DFE3002F6D21 /* Assets.xcassets */,
 				7C928DA31CC8DFE3002F6D21 /* LaunchScreen.storyboard */,
 				7C928DA61CC8DFE3002F6D21 /* Info.plist */,
+				7C10FB9E1CCF624600AED2DE /* CustomScrollViewController.swift */,
+				7C10FBA21CCF68AE00AED2DE /* PagedScrollViewController.swift */,
 			);
 			path = ScroolViews;
 			sourceTree = "<group>";
@@ -139,6 +148,7 @@
 			files = (
 				7C928DB41CC8E103002F6D21 /* photo4.png in Resources */,
 				7C928DB21CC8E103002F6D21 /* photo2.png in Resources */,
+				7C10FBA11CCF679B00AED2DE /* slow.png in Resources */,
 				7C928DB11CC8E103002F6D21 /* photo1.png in Resources */,
 				7C928DA51CC8DFE3002F6D21 /* LaunchScreen.storyboard in Resources */,
 				7C928DB51CC8E103002F6D21 /* photo5.png in Resources */,
@@ -156,7 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C928D9D1CC8DFE3002F6D21 /* ViewController.swift in Sources */,
+				7C10FBA31CCF68AE00AED2DE /* PagedScrollViewController.swift in Sources */,
 				7C928D9B1CC8DFE3002F6D21 /* AppDelegate.swift in Sources */,
+				7C10FB9F1CCF624600AED2DE /* CustomScrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +288,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kpu.2016class.ScroolViews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -288,6 +301,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kpu.2016class.ScroolViews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -310,6 +324,7 @@
 				7C928DAB1CC8DFE3002F6D21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
