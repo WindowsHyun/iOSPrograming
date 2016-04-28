@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ratings/PlayersViewController.swift"
+            timestampString = "482566730.545723"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "PlayersViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ratings.PlayersViewController.players.getter : Swift.Array&lt;Ratings.Player&gt;"
+                  moduleName = "Ratings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WindowsHyun/Downloads/iOSPrograming/Ratings/Ratings/PlayersViewController.swift"
+                  timestampString = "483293066.64231"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ratings.PlayersViewController.players.setter : Swift.Array&lt;Ratings.Player&gt;"
+                  moduleName = "Ratings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WindowsHyun/Downloads/iOSPrograming/Ratings/Ratings/PlayersViewController.swift"
+                  timestampString = "483293066.642629"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ratings.PlayersViewController.init (style : __C.UITableViewStyle) -&gt; Ratings.PlayersViewController"
+                  moduleName = "Ratings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WindowsHyun/Downloads/iOSPrograming/Ratings/Ratings/PlayersViewController.swift"
+                  timestampString = "483293066.642795"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ratings.PlayersViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Ratings.PlayersViewController"
+                  moduleName = "Ratings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WindowsHyun/Downloads/iOSPrograming/Ratings/Ratings/PlayersViewController.swift"
+                  timestampString = "483293066.64296"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ratings.PlayersViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Ratings.PlayersViewController&gt;"
+                  moduleName = "Ratings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WindowsHyun/Downloads/iOSPrograming/Ratings/Ratings/PlayersViewController.swift"
+                  timestampString = "483293066.643117"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ratings/GamePickerViewController.swift"
+            timestampString = "483293965.809451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "GamePickerViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ratings/RatingPickerViewController.swift"
+            timestampString = "483293996.052199"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "RatingPickerViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ratings/RatingPickerViewController.swift"
+            timestampString = "483294055.462399"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "RatingPickerViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ratings.RatingPickerViewController.selectedRating.didset : Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Ratings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WindowsHyun/Downloads/iOSPrograming/Ratings/Ratings/RatingPickerViewController.swift"
+                  timestampString = "483294210.363053"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ratings.RatingPickerViewController.selectedRating.didset : Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Ratings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WindowsHyun/Downloads/iOSPrograming/Ratings/Ratings/RatingPickerViewController.swift"
+                  timestampString = "483294210.363294"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ratings/RatingPickerViewController.swift"
+            timestampString = "483294060.619984"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "RatingPickerViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ratings/RatingPickerViewController.swift"
+            timestampString = "483294063.556432"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "RatingPickerViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ratings.RatingPickerViewController.init (style : __C.UITableViewStyle) -&gt; Ratings.RatingPickerViewController"
+                  moduleName = "Ratings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WindowsHyun/Downloads/iOSPrograming/Ratings/Ratings/RatingPickerViewController.swift"
+                  timestampString = "483294210.365047"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ratings.RatingPickerViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Ratings.RatingPickerViewController"
+                  moduleName = "Ratings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WindowsHyun/Downloads/iOSPrograming/Ratings/Ratings/RatingPickerViewController.swift"
+                  timestampString = "483294210.365222"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ratings.RatingPickerViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Ratings.RatingPickerViewController&gt;"
+                  moduleName = "Ratings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WindowsHyun/Downloads/iOSPrograming/Ratings/Ratings/RatingPickerViewController.swift"
+                  timestampString = "483294210.365392"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ratings/PlayerDetailsViewController.swift"
+            timestampString = "483295034.147054"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ratings/PlayerDetailsViewController.swift"
+            timestampString = "483295076.927795"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
