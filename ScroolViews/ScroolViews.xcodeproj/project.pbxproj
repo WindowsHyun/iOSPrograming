@@ -10,6 +10,8 @@
 		7C10FB9F1CCF624600AED2DE /* CustomScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10FB9E1CCF624600AED2DE /* CustomScrollViewController.swift */; };
 		7C10FBA11CCF679B00AED2DE /* slow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C10FBA01CCF679B00AED2DE /* slow.png */; };
 		7C10FBA31CCF68AE00AED2DE /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10FBA21CCF68AE00AED2DE /* PagedScrollViewController.swift */; };
+		7C72A3131CD21A2D00EDBD20 /* PeekPagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C72A3121CD21A2D00EDBD20 /* PeekPagedScrollViewController.swift */; };
+		7C72A3151CD21CCA00EDBD20 /* ScrollViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C72A3141CD21CCA00EDBD20 /* ScrollViewContainer.swift */; };
 		7C928D9B1CC8DFE3002F6D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C928D9A1CC8DFE3002F6D21 /* AppDelegate.swift */; };
 		7C928D9D1CC8DFE3002F6D21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C928D9C1CC8DFE3002F6D21 /* ViewController.swift */; };
 		7C928DA01CC8DFE3002F6D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C928D9E1CC8DFE3002F6D21 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 		7C10FB9E1CCF624600AED2DE /* CustomScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomScrollViewController.swift; sourceTree = "<group>"; };
 		7C10FBA01CCF679B00AED2DE /* slow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slow.png; sourceTree = "<group>"; };
 		7C10FBA21CCF68AE00AED2DE /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
+		7C72A3121CD21A2D00EDBD20 /* PeekPagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekPagedScrollViewController.swift; sourceTree = "<group>"; };
+		7C72A3141CD21CCA00EDBD20 /* ScrollViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewContainer.swift; sourceTree = "<group>"; };
 		7C928D971CC8DFE3002F6D21 /* ScroolViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScroolViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C928D9A1CC8DFE3002F6D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C928D9C1CC8DFE3002F6D21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				7C928DA61CC8DFE3002F6D21 /* Info.plist */,
 				7C10FB9E1CCF624600AED2DE /* CustomScrollViewController.swift */,
 				7C10FBA21CCF68AE00AED2DE /* PagedScrollViewController.swift */,
+				7C72A3121CD21A2D00EDBD20 /* PeekPagedScrollViewController.swift */,
+				7C72A3141CD21CCA00EDBD20 /* ScrollViewContainer.swift */,
 			);
 			path = ScroolViews;
 			sourceTree = "<group>";
@@ -168,7 +174,9 @@
 				7C928D9D1CC8DFE3002F6D21 /* ViewController.swift in Sources */,
 				7C10FBA31CCF68AE00AED2DE /* PagedScrollViewController.swift in Sources */,
 				7C928D9B1CC8DFE3002F6D21 /* AppDelegate.swift in Sources */,
+				7C72A3131CD21A2D00EDBD20 /* PeekPagedScrollViewController.swift in Sources */,
 				7C10FB9F1CCF624600AED2DE /* CustomScrollViewController.swift in Sources */,
+				7C72A3151CD21CCA00EDBD20 /* ScrollViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
