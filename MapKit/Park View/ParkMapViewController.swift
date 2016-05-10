@@ -61,6 +61,8 @@ class ParkMapViewController: UIViewController {
                 addBoundary()
             case .MapCharacterLocation:
                 addCharacterLocation()
+            case .MapFood:
+                addMapPins()
             default:
                 break;
             }
@@ -89,6 +91,22 @@ class ParkMapViewController: UIViewController {
         let polygon = MKPolygon(coordinates: &park.boundary, count: park.boundaryPointsCount)
         mapView.addOverlay(polygon)
     }
+    
+    func addMapPins() {
+        let filePath = NSBundle.mainBundle().pathForResource("FoodList", ofType: "plist")
+        let attractions = NSArray(contentsOfFile: filePath!)
+        for attraction in attractions! {
+            let point = CGPointFromString(attraction["location"] as! String)
+            let coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(point.x), CLLocationDegrees(point.y))
+            let title = attraction["name"] as! String
+            let typeRawValue = Int(attraction["type"] as! String)!
+            let type = AttractionType(rawValue: typeRawValue)!
+            let subtitle = attraction["subtitle"] as! String
+            let annotation = AttractionAnnotation(coordinate: coordinate, title: title, subtitle: subtitle, type: type)
+            mapView.addAnnotation(annotation)
+        }
+    }
+
     
     func addAttractionPins() {
         let filePath = NSBundle.mainBundle().pathForResource("MagicMountainAttractions", ofType: "plist")
