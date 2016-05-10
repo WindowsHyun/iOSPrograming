@@ -60,7 +60,7 @@
 		<key>type</key>
 		<string>2</string>
 		<key>subtitle</key>
-		<string>Cost: $$</string>
+		<string>Cost: 1000$</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -70,7 +70,7 @@
 		<key>type</key>
 		<string>2</string>
 		<key>subtitle</key>
-		<string>Cost: $</string>
+		<string>Cost: 99999$</string>
 	</dict>
 	<dict>
 		<key>name</key>
