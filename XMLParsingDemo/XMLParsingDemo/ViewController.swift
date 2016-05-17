@@ -21,10 +21,13 @@ class ViewController: UIViewController, NSXMLParserDelegate {
     var title1 = NSMutableString()
     var date = NSMutableString()
     
+    //imageurl
+    var imageurl = NSMutableString()
+    
     func beginParsing()
     {
         posts = []
-        parser = NSXMLParser(contentsOfURL: (NSURL(string:"http://images.apple.com/main/rss/hotnews/hotnews.rss"))!)!
+        parser = NSXMLParser(contentsOfURL: (NSURL(string:"http://apis.data.go.kr/9710000/NationalAssemblyInfoService/getMemberCurrStateList?ServiceKey=sea100UMmw23Xycs33F1EQnumONR%2F9ElxBLzkilU9Yr1oT4TrCot8Y2p0jyuJP72x9rG9D8CN5yuEs6AS2sAiw%3D%3D"))!)!
         parser.delegate = self
         parser.parse()
         tbData!.reloadData()
@@ -41,32 +44,35 @@ class ViewController: UIViewController, NSXMLParserDelegate {
             title1 = ""
             date = NSMutableString()
             date = ""
+            //국회의원 이미지 파일 url
+            imageurl = NSMutableString()
+            imageurl = ""
             
         }
     }
     
     func parser(parser: NSXMLParser!, foundCharacters string: String!)
     {
-    if element.isEqualToString("title")
-    {
+    if element.isEqualToString("empNm"){
     title1.appendString(string)
-    } else if element.isEqualToString("pubDate")
-    {
+    } else if element.isEqualToString("origNm"){
     date.appendString(string)
-    }
+    } else if element.isEqualToString("jpgLink"){
+        imageurl.appendString(string)
+        }
     }
     
     func parser(parser: NSXMLParser!, didEndElement elementName: String!,namespaceURI: String!, qualifiedName qName: String!)
     {
-        if(elementName as NSString).isEqualToString("item")
-        {
-            if !title1.isEqual(nil)
-            {
+        if(elementName as NSString).isEqualToString("item"){
+            if !title1.isEqual(nil){
                 elements.setObject(title1, forKey: "title")
             }
-            if !date.isEqual(nil)
-            {
+            if !date.isEqual(nil){
                 elements.setObject(date, forKey: "date")
+            }
+            if !imageurl.isEqual(nil){
+                elements.setObject(imageurl, forKey: "imageurl")
             }
             posts.addObject(elements)
         }
@@ -88,6 +94,12 @@ class ViewController: UIViewController, NSXMLParserDelegate {
         
         cell.textLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("title") as! NSString as String
         cell.detailTextLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("date") as! NSString as String
+        
+        if let url = NSURL(string: posts.objectAtIndex(indexPath.row).valueForKey("imageurl") as! NSString as String){
+            if let data = NSData(contentsOfURL:  url){
+                cell.imageView!.image = UIImage(data : data)
+            }
+        }
         
         return cell as UITableViewCell
     }
