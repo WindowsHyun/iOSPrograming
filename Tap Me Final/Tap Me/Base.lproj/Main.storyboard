@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Tap_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ad9-cy-IhH">
+                                <rect key="frame" x="234" y="50" width="133" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="5lh-AZ-CaT"/>
+                                    <constraint firstAttribute="width" constant="133" id="PCe-cc-AG3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhy-JU-5f8">
+                                <rect key="frame" x="228" y="478" width="146" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="RaD-59-Tda"/>
+                                    <constraint firstAttribute="height" constant="102" id="weD-1Z-sza"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfO-Pa-0JJ">
+                                <rect key="frame" x="175.5" y="168" width="250" height="265"/>
+                                <state key="normal" backgroundImage="button_tap_deselected.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="button_tap_selected.png"/>
+                                <connections>
+                                    <action selector="buttonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ocg-Nh-hme"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checker_top.png" translatesAutoresizingMaskIntoConstraints="NO" id="fka-ML-IFh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="AWV-Ly-Zff"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checker_bottom.png" translatesAutoresizingMaskIntoConstraints="NO" id="H5Y-2P-DDl">
+                                <rect key="frame" x="0.0" y="578" width="600" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="k5z-h8-29d"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30980393290519714" green="1" blue="0.21960785984992981" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="H5Y-2P-DDl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0vZ-GH-3qY"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Nhy-JU-5f8" secondAttribute="bottom" constant="20" id="BQG-z3-xnQ"/>
+                            <constraint firstAttribute="centerX" secondItem="Nhy-JU-5f8" secondAttribute="centerX" id="Bks-Of-tib"/>
+                            <constraint firstAttribute="centerX" secondItem="LfO-Pa-0JJ" secondAttribute="centerX" id="OET-Ki-NXH"/>
+                            <constraint firstAttribute="trailing" secondItem="fka-ML-IFh" secondAttribute="trailing" id="axo-dj-tTp"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="H5Y-2P-DDl" secondAttribute="bottom" id="fL6-tQ-QYX"/>
+                            <constraint firstAttribute="centerX" secondItem="ad9-cy-IhH" secondAttribute="centerX" id="nAK-ex-ATO"/>
+                            <constraint firstItem="fka-ML-IFh" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="qwk-Vm-0ds"/>
+                            <constraint firstAttribute="centerY" secondItem="LfO-Pa-0JJ" secondAttribute="centerY" id="rHk-4Y-x5x"/>
+                            <constraint firstItem="ad9-cy-IhH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="tLk-56-wZA"/>
+                            <constraint firstAttribute="trailing" secondItem="H5Y-2P-DDl" secondAttribute="trailing" id="uAI-pV-eLw"/>
+                            <constraint firstItem="fka-ML-IFh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="upe-ki-csu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="Nhy-JU-5f8" id="CWj-q9-4Pw"/>
+                        <outlet property="timerLabel" destination="ad9-cy-IhH" id="jp4-il-u0D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="327"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button_tap_deselected.png" width="250" height="265"/>
+        <image name="button_tap_selected.png" width="250" height="265"/>
+        <image name="checker_bottom.png" width="320" height="23"/>
+        <image name="checker_top.png" width="320" height="22"/>
+    </resources>
+</document>
